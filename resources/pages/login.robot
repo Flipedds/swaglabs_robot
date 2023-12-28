@@ -15,12 +15,14 @@ Dado que eu acesse o Swag labs
 E Preencher corretamente o campo de login com USUARIO e SENHA
     Input Text    ${CAMPO_LOGIN}    standard_user
     Input Text    ${CAMPO_SENHA}    secret_sauce
+    Capture Page Screenshot    evidencias/login/fill.png
 
 Quando Clicar no botão de login
     Click Button    ${BOTAO_LOGIN}
 
 Então o usuario deve estar logado
     Element Should Be Visible    class:product_label
+    Capture Page Screenshot    evidencias/login/logged.png
     Sleep    3s
 
 E Preencher incorretamente o campo de login com USUARIO e SENHA

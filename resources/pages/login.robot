@@ -11,9 +11,11 @@ ${BOTAO_LOGIN}    id:login-button
 *** Keywords ***
 Dado que eu acesse o Swag labs
     Open Browser    url=${URL}   browser=${BROWSER}
-E Preencher o campo de login com USUARIO e SENHA
+
+E Preencher corretamente o campo de login com USUARIO e SENHA
     Input Text    ${CAMPO_LOGIN}    standard_user
     Input Text    ${CAMPO_SENHA}    secret_sauce
+
 Quando Clicar no botão de login
     Click Button    ${BOTAO_LOGIN}
 
@@ -24,7 +26,6 @@ Então o usuario deve estar logado
 E Preencher incorretamente o campo de login com USUARIO e SENHA
     Input Text    ${CAMPO_LOGIN}    user
     Input Text    ${CAMPO_SENHA}    secret_sauce
-
 
 Entao devo visualizar mensagem de erro
     Element Should Be Visible    //*[@id="login_button_container"]/div/form/h3

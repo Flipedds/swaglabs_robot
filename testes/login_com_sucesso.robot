@@ -5,6 +5,6 @@ Test Teardown    Fechar navegador
 
 *** Test Cases ***
 Efetuando login com sucesso no swag labs
-    E Preencher o campo de login com USUARIO e SENHA
+    E Preencher corretamente o campo de login com USUARIO e SENHA
     Quando Clicar no botão de login
     Então o usuario deve estar logado

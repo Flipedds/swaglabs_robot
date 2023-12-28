@@ -20,3 +20,11 @@ Quando Clicar no botão de login
 Então o usuario deve estar logado
     Element Should Be Visible    class:product_label
     Sleep    3s
+
+E Preencher incorretamente o campo de login com USUARIO e SENHA
+    Input Text    ${CAMPO_LOGIN}    user
+    Input Text    ${CAMPO_SENHA}    secret_sauce
+
+
+Entao devo visualizar mensagem de erro
+    Element Should Be Visible    //*[@id="login_button_container"]/div/form/h3

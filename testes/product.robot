@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../resources/main.robot
-Resource    ../resources/pages/products.robot
 Test Setup    Dado que eu esteja logado
 Test Teardown    Fechar navegador
 
